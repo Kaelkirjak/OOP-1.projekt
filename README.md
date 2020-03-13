@@ -6,7 +6,7 @@ To-do nimekiri:
    (kas lugeda failist nii, et küsimuse loeb ühte, vastused teise ja vihjed kolmandasse massiivi?).
    
 2. Meetod, mis väljastab küsimused koos valikvastustega.
-    a) Lisameetod, mis väljastab valikvastused random järjekorras.
+   a) Lisameetod, mis väljastab valikvastused random järjekorras.
 
 3. Meetod, mis küsib kasutajalt inputi ja otsustab selle põhjal, kas antud input on õige vastus või mitte.
    Kui kasutaja, küsib vihjet, siis väljastab vihje ekraanile.
