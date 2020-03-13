@@ -14,6 +14,8 @@ To-do nimekiri:
 4. Klass mängija, kus salvestatakse mängija info ja uuendatakse võidusumma seisu peale igat küsimust. Peale mängu väljastab 
    mängija nime ja võidusumma.
 
+5. Küsimused välja mõelda
+
 Lisameetodid (implementeerida, kui aega üle jääb)
 
 1. Timer, mis paneb ajapiirangu peale kaua saab vastata küsimusele, kui ei vastata selle aja piires küsimusele, siis
