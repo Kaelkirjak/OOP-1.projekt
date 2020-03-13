@@ -2,8 +2,7 @@
 
 To-do nimekiri:
 
-1. Meetod, mis loeb failist andmed ja moodustab massiivi nende põhjal.
-   (kas lugeda failist nii, et küsimuse loeb ühte, vastused teise ja vihjed kolmandasse massiivi?).
++1. Meetod, mis loeb failist andmed ja moodustab massiivid nende põhjal(kasutab klassi Andmed.java).
    
 2. Meetod, mis väljastab küsimused koos valikvastustega.
    a) Lisameetod, mis väljastab valikvastused random järjekorras.
