@@ -18,11 +18,6 @@ public class Mängija {
     }
 
     public void setVõidusumma(int võidusumma) {
-        this.võidusumma = võidusumma;
-    }
-
-    // Väljastab mängija nime ja võidusumma.
-    public String toString() {
-        return "Mängija: " + nimi + "; Võidusumma: " + võidusumma;
+        this.võidusumma = võidusumma + this.võidusumma;
     }
 }
