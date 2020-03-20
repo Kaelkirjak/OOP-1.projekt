@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.Random;
 
 public class KesTahabSaadaMiljonäriks {
 
@@ -56,6 +57,29 @@ public class KesTahabSaadaMiljonäriks {
 
         return new Andmed(võidetavSumma, küsimused, vastused, vihjed, õigedVastused);
     }
+    //meetod, mis paneb vastusevariandid random järjekorda
+    public static String[] randomVastused(String [] variandid) {
+
+        //teen indeksite listi
+        int[] vastused= {0,1,2};
+        Random random = new Random();
+
+        //panen indeksid listis random järjekorda
+        for (int i = 0; i < vastused.length; i++) {
+            int suvalineIndeks = random.nextInt(vastused.length);
+            int suvaline= vastused[suvalineIndeks];
+            vastused[suvalineIndeks] = vastused[i];
+            vastused[i] = suvaline;}
+
+        //eelnevalt random indeksite listile panen vastavusse elemendid
+        String[] randomVariandid=new String[4];
+        for (int i=0;i<3;i++) {
+            randomVariandid[i] = variandid[vastused[i]];
+        }
+        randomVariandid[3]=variandid[3];
+        return randomVariandid;
+    }
+
     // test meetod, et näha, kas massiividesse salvestati õige info õigesse kohta.
     static void väljastamine() throws Exception {
         Andmed informatsioon = küsimusteAndmed("küsimused.txt");
@@ -64,6 +88,7 @@ public class KesTahabSaadaMiljonäriks {
         String[][] vastused = informatsioon.getVastused();
         String[] vihjed = informatsioon.getVihjed();
         String[] õiged = informatsioon.getÕigedVastused();
+
         for (int i = 0; i < summa.length; i++) {
 
             //Uus voor algab
@@ -74,8 +99,10 @@ public class KesTahabSaadaMiljonäriks {
             String valmisolek =üks.nextLine();
 
             System.out.println(küsimused[i]);
-
             String[] vastuseTükid= Arrays.toString(vastused[i]).split(", ");
+
+            vastuseTükid= randomVastused(vastuseTükid);
+
             // "[" ja "]" peaks kuidagi ära saama.
             for (int j=0; j<4;j++)
                 System.out.println((j+1)+") "+vastuseTükid[j]);
