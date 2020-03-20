@@ -5,7 +5,7 @@ To-do nimekiri:
 +1. Meetod, mis loeb failist andmed ja moodustab massiivid nende põhjal(kasutab klassi Andmed.java).
    
 +2. Meetod, mis väljastab küsimused koos valikvastustega.
-   -a) Lisameetod, mis väljastab valikvastused random järjekorras.
+   +a) Lisameetod, mis väljastab valikvastused random järjekorras.
 
 +3. Meetod, mis küsib kasutajalt inputi ja otsustab selle põhjal, kas antud input on õige vastus või mitte.
     Kui kasutaja, küsib vihjet, siis väljastab vihje ekraanile.
@@ -13,7 +13,7 @@ To-do nimekiri:
 +4. Klass mängija, kus salvestatakse mängija info ja uuendatakse võidusumma seisu peale igat küsimust. Peale mängu väljastab 
     mängija nime ja võidusumma.
 
-5. Küsimused välja mõelda
++5. Küsimused välja mõelda
 
 Lisameetodid (implementeerida, kui aega üle jääb)
 
