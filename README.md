@@ -19,3 +19,5 @@ Lisameetodid (implementeerida, kui aega üle jääb)
 
 1. Timer, mis paneb ajapiirangu peale kaua saab vastata küsimusele, kui ei vastata selle aja piires küsimusele, siis
    mängija kaotab ja tema jaoks on mäng läbi selleks korraks.
+   
+2. Väljastab õige vastuse koos lisainformatsiooniga.
