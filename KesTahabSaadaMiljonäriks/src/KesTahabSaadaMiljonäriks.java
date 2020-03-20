@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class KesTahabSaadaMiljonäriks {
 
@@ -64,19 +65,48 @@ public class KesTahabSaadaMiljonäriks {
         String[] vihjed = informatsioon.getVihjed();
         String[] õiged = informatsioon.getÕigedVastused();
         for (int i = 0; i < summa.length; i++) {
-            System.out.println(summa[i]);
+
+            //Uus voor algab
+
+            System.out.println("\nKui vastate järgmise küsimuse õigesti, siis võidate: "+summa[i]+" eurot!");
+            Scanner üks =new Scanner(System.in);
+            System.out.println("Sisestage midagi, kui olete valmis küsimuseks ");
+            String valmisolek =üks.nextLine();
+
             System.out.println(küsimused[i]);
-            System.out.println(Arrays.toString(vastused[i]));
-            System.out.println(vihjed[i]);
-            System.out.println(õiged[i]);
+
+            String[] vastuseTükid= Arrays.toString(vastused[i]).split(", ");
+            // "[" ja "]" peaks kuidagi ära saama.
+            for (int j=0; j<4;j++)
+                System.out.println((j+1)+") "+vastuseTükid[j]);
+
+            //Küsimine kasutajalt, kas ta soovib vihjet
+            Scanner kaks =new Scanner(System.in);
+            System.out.println("Kui soovite VIHJET, vajutage \"V\", kui ei soovi, vajutage midagi muud");
+            String vihje=kaks.nextLine();
+            if(vihje.equals("V"))
+                System.out.println("VIHJE: "+vihjed[i]);
+
+            Scanner kolm= new Scanner(System.in);
+            System.out.println("Nüüd peate sisestama õige vastuse: ");
+            String vastus=kolm.nextLine();
+            Scanner neli=new Scanner(System.in);
+            System.out.println("Sisestasite: "+vastus);
+
+            //Õige vastuse kontroll
+            if (vastus.equals(õiged[i])){
+                System.out.println("ÕIGE, õige vastus on: "+õiged[i]);
+                //võidusumma lisamine?
+            }
+            else{
+                System.out.println("Vale vastus, õige oli: "+õiged[i]);
+            }
+            System.out.println("");
         }
     }
 
     public static void main(String[] args) throws Exception {
         Mängija mängija = new Mängija("Toomas Mets", 0);
-        //String failitee = "küsimused.txt";
-        //Andmed informatsioon = küsimusteAndmed(failitee);
-        //int[] võidetavSumma = Andmed.getSumma();
         väljastamine();
     }
 }
