@@ -18,6 +18,6 @@ public class Mängija {
     }
 
     public void setVõidusumma(int võidusumma) {
-        this.võidusumma = võidusumma + this.võidusumma;
+        this.võidusumma = võidusumma;
     }
 }

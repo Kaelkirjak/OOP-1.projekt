@@ -1,4 +1,4 @@
-import java.util.Arrays;
+import java.sql.SQLOutput;
 import java.util.Scanner;
 import java.util.Random;
 
@@ -81,7 +81,7 @@ public class KesTahabSaadaMiljonäriks {
     }
 
     // test meetod, et näha, kas massiividesse salvestati õige info õigesse kohta.
-    static void väljastamine() throws Exception {
+    static void väljastamine(Mängija mängija) throws Exception {
         Andmed informatsioon = küsimusteAndmed("küsimused.txt");
         int[] summa = informatsioon.getSumma();
         String[] küsimused = informatsioon.getKüsimused();
@@ -99,14 +99,19 @@ public class KesTahabSaadaMiljonäriks {
             String valmisolek =üks.nextLine();
 
             System.out.println(küsimused[i]);
-            String[] vastuseTükid= Arrays.toString(vastused[i]).split(", ");
+            //String[] vastuseTükid= Arrays.toString(vastused[i]).split(", ");
+            String[] vastuseTükid = new String[4];
+            vastuseTükid[0] = vastused[i][0];
+            vastuseTükid[1] = vastused[i][1];
+            vastuseTükid[2] = vastused[i][2];
+            vastuseTükid[3] = vastused[i][3];
 
             vastuseTükid= randomVastused(vastuseTükid);
 
-            // "[" ja "]" peaks kuidagi ära saama.
-            for (int j=0; j<4;j++)
-                System.out.println((j+1)+") "+vastuseTükid[j]);
-
+            for (int j=0; j<4;j++) {
+                System.out.println((j + 1) + ") " + vastuseTükid[j]);
+            }
+            
             //Küsimine kasutajalt, kas ta soovib vihjet
             Scanner kaks =new Scanner(System.in);
             System.out.println("Kui soovite VIHJET, vajutage \"V\", kui ei soovi, vajutage midagi muud");
@@ -120,20 +125,31 @@ public class KesTahabSaadaMiljonäriks {
             Scanner neli=new Scanner(System.in);
             System.out.println("Sisestasite: "+vastus);
 
+            if (vastus.startsWith("Ei")) {
+                System.out.println("Teie jaoks on mäng kahjuks läbi.");
+                break;
+            }
+
             //Õige vastuse kontroll
             if (vastus.equals(õiged[i])){
                 System.out.println("ÕIGE, õige vastus on: "+õiged[i]);
-                //võidusumma lisamine?
+                mängija.setVõidusumma(summa[i]);
             }
             else{
                 System.out.println("Vale vastus, õige oli: "+õiged[i]);
             }
             System.out.println("");
         }
+        System.out.print("Mängija " + mängija.getNimi() + " lahkub saatest " + mängija.getVõidusumma() + " euroga.");
+        System.out.println();
     }
 
     public static void main(String[] args) throws Exception {
-        Mängija mängija = new Mängija("Toomas Mets", 0);
-        väljastamine();
+        System.out.println("Tere tulemast mängu \"kes tahab saada miljonäriks\".");
+        System.out.print("Palun sisestage oma nimi: ");
+        Scanner mängijaNimeke = new Scanner(System.in);
+        String mängijaNimi = mängijaNimeke.nextLine();
+        Mängija mängija = new Mängija(mängijaNimi, 0);
+        väljastamine(mängija);;
     }
 }
