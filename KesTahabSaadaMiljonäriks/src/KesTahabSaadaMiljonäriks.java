@@ -199,7 +199,7 @@ public class KesTahabSaadaMiljonäriks {
                 mängija.setVõidusumma(summa[i]);
             }
             else{ // Kui mängija sisestas vale vastuse lõpetatakse tema mäng.
-                System.out.println("Vale vastus,  "+lisa[i]);
+                System.out.println("Vale vastus, "+lisa[i]);
                 mängija.setVõidusumma(0); // Mängija võidetav summa väärtustatakse nulliga.
                 System.out.println();
                 System.out.println("Teie jaoks on kahjuks mäng läbi.");
