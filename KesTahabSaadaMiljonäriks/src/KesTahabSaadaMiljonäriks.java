@@ -1,4 +1,3 @@
-import java.sql.SQLOutput;
 import java.util.Scanner;
 import java.util.Random;
 
@@ -89,6 +88,7 @@ public class KesTahabSaadaMiljonäriks {
         String[] vihjed = informatsioon.getVihjed();
         String[] õiged = informatsioon.getÕigedVastused();
 
+        int vihjeteArv = 3;
         for (int i = 0; i < summa.length; i++) {
 
             //Uus voor algab
@@ -99,7 +99,7 @@ public class KesTahabSaadaMiljonäriks {
             String valmisolek =üks.nextLine();
 
             System.out.println(küsimused[i]);
-            //String[] vastuseTükid= Arrays.toString(vastused[i]).split(", ");
+
             String[] vastuseTükid = new String[4];
             vastuseTükid[0] = vastused[i][0];
             vastuseTükid[1] = vastused[i][1];
@@ -111,14 +111,16 @@ public class KesTahabSaadaMiljonäriks {
             for (int j=0; j<4;j++) {
                 System.out.println((j + 1) + ") " + vastuseTükid[j]);
             }
-            
-            //Küsimine kasutajalt, kas ta soovib vihjet
-            Scanner kaks =new Scanner(System.in);
-            System.out.println("Kui soovite VIHJET, vajutage \"V\", kui ei soovi, vajutage midagi muud");
-            String vihje=kaks.nextLine();
-            if(vihje.equals("V"))
-                System.out.println("VIHJE: "+vihjed[i]);
 
+            if (vihjeteArv != 0) {
+                Scanner kaks = new Scanner(System.in);
+                System.out.print("Kui soovite VIHJET, vajutage \"V\", kui ei soovi, vajutage midagi muud.");
+                System.out.println(" Teil on järgi " + vihjeteArv + " vihjet.");
+                String vihje = kaks.nextLine();
+                if (vihje.equals("V"))
+                    System.out.println("VIHJE: " + vihjed[i]);
+                vihjeteArv--;
+            }
             Scanner kolm= new Scanner(System.in);
             System.out.println("Nüüd peate sisestama õige vastuse: ");
             String vastus=kolm.nextLine();
@@ -137,6 +139,10 @@ public class KesTahabSaadaMiljonäriks {
             }
             else{
                 System.out.println("Vale vastus, õige oli: "+õiged[i]);
+                mängija.setVõidusumma(0);
+                System.out.println();
+                System.out.println("Teie jaoks on kahjuks mäng läbi.");
+                break;
             }
             System.out.println("");
         }
