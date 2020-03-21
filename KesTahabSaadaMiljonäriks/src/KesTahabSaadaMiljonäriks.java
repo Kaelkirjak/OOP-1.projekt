@@ -90,9 +90,29 @@ public class KesTahabSaadaMiljonäriks {
         return --interval; // Tagastab ühe võrra väiksema arvu.
     }
 
+    //meetod lisateksti  faili lugemise ja massiivi panemise jaoks
+    public static String[] lisaTekst(String set) throws Exception{
+        String failiteekond= "lisatekst"+set+".txt";
+        java.io.File fail= new java.io.File(failiteekond);
+        String[] lisa= new String[15];
+        int i=0;
+        try (java.util.Scanner sc = new java.util.Scanner(fail, "UTF-8")){
+            while (sc.hasNextLine()) {
+                String rida= sc.nextLine();
+                lisa[i]=rida;
+                i++;
+            }
+        }
+        return lisa;
+    }
+
     // meetod, kus toimub reaalne mängu mängimine.
     static void väljastamine(Mängija mängija) throws Exception {
-        Andmed informatsioon = küsimusteAndmed("küsimused.txt"); // Luuakse andmed, kasutades meetodit küsimusteAndmed(failiteekond).
+        Scanner küsimus= new Scanner(System.in);
+        System.out.println("Millist küsimuste set'i soovite proovida (valige kas \"1\" või \"2\")? ");
+        String set=küsimus.nextLine();
+        String fail= "küsimused"+set+".txt";
+        Andmed informatsioon = küsimusteAndmed(fail); // Luuakse andmed, kasutades meetodit küsimusteAndmed(failiteekond).
 
         // Massiivid/maatriks oma vastava sisuga.
         int[] summa = informatsioon.getSumma();
@@ -100,6 +120,9 @@ public class KesTahabSaadaMiljonäriks {
         String[][] vastused = informatsioon.getVastused();
         String[] vihjed = informatsioon.getVihjed();
         String[] õiged = informatsioon.getÕigedVastused();
+
+        //Eraldi failis asuva lisainfo massiivi lisamine
+        String lisa[] = lisaTekst(set);
 
         int vihjeteArv = 3; // Tähistab mitu korda saab mängija vihjet küsida.
         for (int i = 0; i < summa.length; i++) {
@@ -172,11 +195,11 @@ public class KesTahabSaadaMiljonäriks {
 
             //Õige vastuse kontroll
             if (vastus.equals(õiged[i])){
-                System.out.println("ÕIGE, õige vastus on: "+õiged[i]);
+                System.out.println("ÕIGE, "+ lisa[i].toString());
                 mängija.setVõidusumma(summa[i]);
             }
             else{ // Kui mängija sisestas vale vastuse lõpetatakse tema mäng.
-                System.out.println("Vale vastus, õige oli: "+õiged[i]);
+                System.out.println("Vale vastus,  "+lisa[i]);
                 mängija.setVõidusumma(0); // Mängija võidetav summa väärtustatakse nulliga.
                 System.out.println();
                 System.out.println("Teie jaoks on kahjuks mäng läbi.");
