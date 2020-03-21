@@ -9,6 +9,7 @@ public class Mängija {
         this.võidusumma = võidusumma;
     }
 
+    // Get meetodid.
     public String getNimi() {
         return nimi;
     }
@@ -16,7 +17,7 @@ public class Mängija {
     public int getVõidusumma() {
         return võidusumma;
     }
-
+    // Set meetod, kus kirjutatakse võidusumma üle, kui mängija kaotas või võitis raha.
     public void setVõidusumma(int võidusumma) {
         this.võidusumma = võidusumma;
     }

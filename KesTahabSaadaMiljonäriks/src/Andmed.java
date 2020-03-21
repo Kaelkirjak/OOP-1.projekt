@@ -1,14 +1,14 @@
 import java.util.Arrays;
 
 public class Andmed {
-    // Isendiväljad
+    // Isendiväljad.
     private int[] summa;
     private String[] küsimused;
     private String[][] vastused;
     private String[] vihjed;
     private String[] õigedVastused;
 
-    // Konstruktor
+    // Konstruktor.
     public Andmed(int[] summa, String[] küsimused, String[][] vastused, String[] vihjed, String[] õigedVastused) {
         this.summa = summa;
         this.küsimused = küsimused;
@@ -17,6 +17,7 @@ public class Andmed {
         this.õigedVastused = õigedVastused;
     }
 
+    // Get meetodid.
     public int[] getSumma() {
         return summa;
     }
@@ -35,12 +36,5 @@ public class Andmed {
 
     public String[] getÕigedVastused() {
         return õigedVastused;
-    }
-
-    // test to string nägemaks, kas väljastab õiged asjad
-    public String toString() {
-        return "Summad: " + Arrays.toString(summa) + "\n" + "Küsimused:  " + Arrays.toString(küsimused) + "\n" +
-                "Vihjed: " + Arrays.toString(vihjed) + "\n" + "Õiged vastused: " + Arrays.toString(õigedVastused) + "\n" +
-                "Vastused: " + Arrays.deepToString(vastused);
     }
 }
