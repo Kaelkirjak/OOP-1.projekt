@@ -1,0 +1,134 @@
+Summa: 100 eurot
+Keda kutsutakse hiirekuningaks?
+a) Kass
+b) Rebane
+c) Nugis
+d) Ei oska vastata ning lahkun mängust 0 euroga.
+VIHJE: 
+õige: Kass
+
+Summa: 200 eurot
+Mida nendest võib eriti palju näha Norras?
+a) Fjorde
+b) Soolajärvesid
+c) Mudavulkaane
+d) Ei oska vastata ning lahkun mängust 100 euroga.
+VIHJE:
+õige: Mudavulkaane
+
+Summa: 300 eurot
+Milline Aasias asuv riik võtab igal aastal osa Eurovisiooni lauluvõistlusest?
+a) Süüria
+b) Jordaania
+c) Iisrael
+d) Ei oska vastata ning lahkun mängust 200 euroga.
+VIHJE: Sellest riigist pärines Eurovisiooni 2018. aasta võitja.
+õige: Iisrael
+
+Summa: 500 eurot
+Millisest Eesti ajaloosündmusest jutustab film "Detsembrikuumus"?
+a) Vabadussõjast
+b) 1940. aasta juunipöördest
+c) 1924. aasta mässukatsest
+d) Ei oska vastata ja lahkun mängust 300 euroga.
+VIHJE: 
+õige: 1924. aasta mässukatse
+
+Summa: 1000 eurot
+Millest valmistatakse tofut?
+a) Sojast
+b) Riisist
+c) Rukkist
+d) Ei oska vastata ja lahkun mängust 500 euroga.
+VIHJE:
+õige: tofust
+
+Summa: 2000 eurot
+Mille leiutaja on sakslane Johann Gutenberg?
+a) Kompassi
+b) Trükikunsti
+c) Püssirohu
+d) Ei oska vastata ja lahkun mängust 1000 euroga.
+VIHJE:
+õige: Trükikunsti
+
+Summa: 4000 eurot
+Mis aastal uppus reisiparvlaev Estonia?
+a) 1994. aastal
+b) 1990. aastal
+c) 1998. aastal
+d) Ei oska vastata ja lahkun mängust 2000 euroga.
+VIHJE:  
+õige: 1994. aastal
+
+Summa: 8000 eurot
+Millises maailmajaos elavad pooled maailma ligikaudu miljardist katoliiklasest?
+a) Lõuna-Ameerika
+b) Aasias
+c) Põhja-Ameerikas
+d) Ei oska vastata ja lahkun mängust 4000 euroga.
+VIHJE:
+õige: Lõuna-Ameerikas
+
+Summa: 16000 eurot
+Mitu liiki on ninasarvikuid?
+a) 1 liiki
+b) 5 liiki
+c) 7 liiki
+d) Ei oska vastata ja lahkun mängust 8000 euroga.
+VIHJE:
+õige: 5 liiki
+
+Summa: 32000 eurot
+Kelle üks maalidest viis kunstimõiste impressionism tekkimiseni?
+a) Henri Matisse'i
+b) Claude Monet'
+c) Edouard Manet'
+d) Ei oska vastata ja lahkun mängust 16000 euroga.
+VIHJE:
+õige: Claude Monet'
+
+Summa: 64000 eurot
+Mis laadi toit on itaallaste ciabatta?
+a) Pitsa
+b) Leib
+c) Pirukas
+d) Ei oska vastata ja lahkun mängust 32000 euroga.
+VIHJE:
+õige: Leib
+
+Summa: 125000 eurot
+Mitu tähte on igal mängijal käes Scrabble mängu alguses?
+a) 7
+b) 8
+c) 9
+d) Ei oska vastata ja lahkun mängust 64000 euroga.
+VIHJE:
+õige: 7
+
+Summa: 250000 eurot
+Milline neist Aasia riikidest asub kõige rohkem lõuna pool?
+a) Bangladesh
+b) Filipiinid
+c) Taiwan
+d) Ei oska vastata ja lahkun mängust 125000 euroga.
+VIHJE:
+õige: Filipiinid
+
+Summa: 500000 eurot
+Mis keelest on pärit sõna barokk?
+a) Portugal
+b) Itaalia
+c) Kreeka
+d) Ei oska vastata ja lahkun mängust 250000 euroga.
+VIHJE:
+õige: Portugal
+
+Summa: 1000000
+Milline riik on maailma suurim kiivitootja?
+a) Itaalia
+b) Uus-Meremaa
+c) Austraalia
+d) Ei oska vastata ja lahkun mängust 500000 euroga.
+VIHJE:
+õige: Itaalia
