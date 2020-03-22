@@ -209,6 +209,8 @@ public class KesTahabSaadaMiljonäriks {
         }
         // Väljastatakse mängija nimi ja tema võidusumma.
         System.out.print("Mängija " + mängija.getNimi() + " lahkub saatest " + mängija.getVõidusumma() + " euroga.");
+        if (mängija.getVõidusumma()>500000)
+            System.out.println("Respect. olete minu silmis miljonär :)");
         System.out.println();
     }
 
