@@ -4,7 +4,7 @@ a) Kass
 b) Rebane
 c) Nugis
 d) Ei oska vastata ning lahkun mängust 0 euroga.
-VIHJE: 
+VIHJE: Filmis "Tom and Jerry" on kujutatud nende kahe looma rivaalitsemist.
 õige: Kass
 
 Summa: 200 eurot
@@ -13,8 +13,8 @@ a) Fjorde
 b) Soolajärvesid
 c) Mudavulkaane
 d) Ei oska vastata ning lahkun mängust 100 euroga.
-VIHJE:
-õige: Mudavulkaane
+VIHJE: Soolajärved esinevad pigem soojades maades.
+õige: Fjorde
 
 Summa: 300 eurot
 Milline Aasias asuv riik võtab igal aastal osa Eurovisiooni lauluvõistlusest?
@@ -31,17 +31,17 @@ a) Vabadussõjast
 b) 1940. aasta juunipöördest
 c) 1924. aasta mässukatsest
 d) Ei oska vastata ja lahkun mängust 300 euroga.
-VIHJE: 
+VIHJE: Detsembrimäss oli Nõukogude Liidu ebaõnnestunud võimuhaaramise katse Eestis (1. detsembril).
 õige: 1924. aasta mässukatse
 
 Summa: 1000 eurot
 Millest valmistatakse tofut?
-a) Sojast
+a) Sojapiimast
 b) Riisist
-c) Rukkist
+c) Kitsepiimast
 d) Ei oska vastata ja lahkun mängust 500 euroga.
-VIHJE:
-õige: tofust
+VIHJE: Valmistamine: leotatakse ja purustatakse ..., seejärel segu keedetakse ning kurnatakse. Tahke mass pressitakse kokku ning saadakse tofu.
+õige: sojapiimast
 
 Summa: 2000 eurot
 Mille leiutaja on sakslane Johann Gutenberg?
@@ -49,16 +49,16 @@ a) Kompassi
 b) Trükikunsti
 c) Püssirohu
 d) Ei oska vastata ja lahkun mängust 1000 euroga.
-VIHJE:
+VIHJE: Tartus Aparaaditehases elavale kassile pandi nimeks "Johan Gutenberg".
 õige: Trükikunsti
 
 Summa: 4000 eurot
-Mis aastal uppus reisiparvlaev Estonia?
+Mis aastal uppus "valge laev" ehk reisiparvlaev Estonia?
 a) 1994. aastal
 b) 1990. aastal
 c) 1998. aastal
 d) Ei oska vastata ja lahkun mängust 2000 euroga.
-VIHJE:  
+VIHJE: Estonia alusas merereise 2. veebruaril 1993.
 õige: 1994. aastal
 
 Summa: 8000 eurot
@@ -67,7 +67,7 @@ a) Lõuna-Ameerika
 b) Aasias
 c) Põhja-Ameerikas
 d) Ei oska vastata ja lahkun mängust 4000 euroga.
-VIHJE:
+VIHJE: Aasia ei ole õige vastus
 õige: Lõuna-Ameerikas
 
 Summa: 16000 eurot
@@ -76,7 +76,7 @@ a) 1 liiki
 b) 5 liiki
 c) 7 liiki
 d) Ei oska vastata ja lahkun mängust 8000 euroga.
-VIHJE:
+VIHJE: 2 liiki elavad Aafrikas, ülejäänud mujal.
 õige: 5 liiki
 
 Summa: 32000 eurot
@@ -85,17 +85,17 @@ a) Henri Matisse'i
 b) Claude Monet'
 c) Edouard Manet'
 d) Ei oska vastata ja lahkun mängust 16000 euroga.
-VIHJE:
+VIHJE: Kunstivool on saanud nime 1872. aastal maalitud maaliga "Impressioon. Tõusev päike".
 õige: Claude Monet'
 
 Summa: 64000 eurot
 Mis laadi toit on itaallaste ciabatta?
 a) Pitsa
-b) Leib
+b) Sai
 c) Pirukas
 d) Ei oska vastata ja lahkun mängust 32000 euroga.
-VIHJE:
-õige: Leib
+VIHJE: Selle leiutamist inspireeris Prantsusmaal väga levinud baguette.
+õige: Sai
 
 Summa: 125000 eurot
 Mitu tähte on igal mängijal käes Scrabble mängu alguses?
@@ -103,7 +103,7 @@ a) 7
 b) 8
 c) 9
 d) Ei oska vastata ja lahkun mängust 64000 euroga.
-VIHJE:
+VIHJE: 9 on vale vastus
 õige: 7
 
 Summa: 250000 eurot
@@ -112,7 +112,7 @@ a) Bangladesh
 b) Filipiinid
 c) Taiwan
 d) Ei oska vastata ja lahkun mängust 125000 euroga.
-VIHJE:
+VIHJE: Tegemist on saareriigiga
 õige: Filipiinid
 
 Summa: 500000 eurot
@@ -121,7 +121,7 @@ a) Portugal
 b) Itaalia
 c) Kreeka
 d) Ei oska vastata ja lahkun mängust 250000 euroga.
-VIHJE:
+VIHJE: Barokk tuleb sõnast barroco, mis tähendab ebakorrapärast pärli.
 õige: Portugal
 
 Summa: 1000000
@@ -130,5 +130,5 @@ a) Itaalia
 b) Uus-Meremaa
 c) Austraalia
 d) Ei oska vastata ja lahkun mängust 500000 euroga.
-VIHJE:
+VIHJE: Austraalia on vale vastus.
 õige: Itaalia
