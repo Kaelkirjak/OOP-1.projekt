@@ -104,7 +104,7 @@ b) 149.6 milj km
 c) 194.6 milj km
 d) Ei oska vastata ja lahkun saatest 64 000 euroga
 VIHJE: Päiksesel kõige lähim planeet Merkuur asub päikesest umbes 66 miljoni kilomeetri kaugusel.
-õige: 149.6 miljon km
+õige: 149.6 milj km
 
 Summa: 250000 eurot
 Milline putukas takistas 1947. aastal arvuti tööd ning inspireeris väljendit "computer bug"?
