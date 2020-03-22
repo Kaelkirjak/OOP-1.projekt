@@ -213,7 +213,7 @@ public class KesTahabSaadaMiljonäriks {
     }
 
     public static void main(String[] args) throws Exception {
-        System.out.println("Tere tulemast mängu \"kes tahab saada miljonäriks\".");
+        System.out.println("\nTere tulemast mängu \"kes tahab saada miljonäriks\".");
         System.out.println("Iga küsimuse jaoks on 1 minut aega, et sellele vastata. Kui ei jõua selle aja sees vastata on Teie jaoks mäng läbi.");
         System.out.println("Samuti on mäng läbi, kui sisestate vale vastuse.");
         System.out.println("Vastuseks sisestage üks valiku vastustest MITTE NUMBER.");
