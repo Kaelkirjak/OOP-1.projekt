@@ -15,6 +15,8 @@ To-do nimekiri:
 
 +5. Küsimused välja mõelda
 
+6. midagi lahedat võitmise korral (ehk vastab kõigile 15 küsimusele õigesti)
+
 Lisameetodid (implementeerida, kui aega üle jääb)
 
 +1. Timer, mis paneb ajapiirangu peale kaua saab vastata küsimusele, kui ei vastata selle aja piires küsimusele, siis
