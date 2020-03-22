@@ -60,21 +60,21 @@ public class KesTahabSaadaMiljonäriks {
         }
         return new Andmed(võidetavSumma, küsimused, vastused, vihjed, õigedVastused);
     }
-    //meetod, mis paneb vastusevariandid random järjekorda
+    // Meetod, kus pannakse vastusevariandid random järjekorda.
     public static String[] randomVastused(String [] variandid) {
 
-        //teen indeksite listi
+        // Tehakse indeksite list.
         int[] vastused= {0,1,2};
         Random random = new Random();
 
-        //panen indeksid listis random järjekorda
+        // Pannakse indeksid listis random järjekorda.
         for (int i = 0; i < vastused.length; i++) {
             int suvalineIndeks = random.nextInt(vastused.length);
             int suvaline= vastused[suvalineIndeks];
             vastused[suvalineIndeks] = vastused[i];
             vastused[i] = suvaline;}
 
-        //eelnevalt random indeksite listile panen vastavusse elemendid
+        // Eelnevalt random indeksite listile pannakse vastavusse elemendid.
         String[] randomVariandid=new String[4];
         for (int i=0;i<3;i++) {
             randomVariandid[i] = variandid[vastused[i]];
@@ -83,14 +83,14 @@ public class KesTahabSaadaMiljonäriks {
         return randomVariandid;
     }
 
-    // meetod taimeri jaoks.
+    // Meetod taimeri jaoks.
     private static int setInterval() {
         if (interval == 1)
-            timer.cancel(); // Lõpetab taimeri.
-        return --interval; // Tagastab ühe võrra väiksema arvu.
+            timer.cancel(); // Lõpetatakse taimer.
+        return --interval; // Tagastatakse ühe võrra väiksem arv.
     }
 
-    // meetod, kus toimub reaalne mängu mängimine.
+    // Meetod, kus toimub reaalne mängu mängimine.
     static void väljastamine(Mängija mängija) throws Exception {
         Andmed informatsioon = küsimusteAndmed("küsimused.txt"); // Luuakse andmed, kasutades meetodit küsimusteAndmed(failiteekond).
 
@@ -101,11 +101,10 @@ public class KesTahabSaadaMiljonäriks {
         String[] vihjed = informatsioon.getVihjed();
         String[] õiged = informatsioon.getÕigedVastused();
 
-        int vihjeteArv = 3; // Tähistab mitu korda saab mängija vihjet küsida.
+        int vihjeteArv = 3; // Tähistab, mitu korda saab mängija vihjet küsida.
         for (int i = 0; i < summa.length; i++) {
 
             //Uus voor algab
-
             System.out.println("\nKui vastate järgmise küsimuse õigesti, siis võidate: "+summa[i]+" eurot!"); // Väljastatakse teave küsimuse kohta.
             Scanner üks =new Scanner(System.in);
             System.out.println("Sisestage midagi, kui olete valmis küsimuseks ");
@@ -126,11 +125,10 @@ public class KesTahabSaadaMiljonäriks {
                 System.out.println((j + 1) + ") " + vastuseTükid[j]);
             }
 
-
-            int viivitus = 1000; // Aeg millisekundites (1000ms = 1s).
-            int periood = 1000; // Samuti aeg millisekundites.
             timer = new Timer(); // Luuakse uus taimer.
-            String sekundid = "20"; // Aeg, mis on mängijal vastamiseks.
+            int ooteaeg = 1000; // Aeg millisekundites (1000ms = 1s).
+            int periood = 1000; // Samuti aeg millisekundites.
+            String sekundid = "60"; // Aeg, mis on mängijal vastamiseks(60 sekundit ehk 1 minut).
             interval = Integer.parseInt(sekundid);
             timer.scheduleAtFixedRate(new TimerTask() {
                 public void run() {
@@ -145,7 +143,7 @@ public class KesTahabSaadaMiljonäriks {
                         System.exit(0); // Lõpetatakse programmi töö.
                     }
                 }
-            }, viivitus, periood);
+            }, ooteaeg, periood);
 
             if (vihjeteArv != 0) { // Kontrollitakse, kas mängija saab veel vihjeid kasutada.
                 Scanner kaks = new Scanner(System.in);
@@ -171,8 +169,7 @@ public class KesTahabSaadaMiljonäriks {
                 break;
             }
 
-            //Õige vastuse kontroll
-            if (vastus.equals(õiged[i])){
+            if (vastus.equals(õiged[i])){ // Õige vastuse kontroll
                 System.out.println("ÕIGE, õige vastus on: "+õiged[i]);
                 mängija.setVõidusumma(summa[i]);
             }
