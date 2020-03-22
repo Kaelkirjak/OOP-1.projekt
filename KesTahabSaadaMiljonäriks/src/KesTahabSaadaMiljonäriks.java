@@ -99,7 +99,7 @@ public class KesTahabSaadaMiljonäriks {
         try (java.util.Scanner sc = new java.util.Scanner(fail, "UTF-8")){
             while (sc.hasNextLine()) {
                 String rida= sc.nextLine();
-                lisa[i]=rida;
+                lisa[i]=rida; //loeb lisateksti massiivi
                 i++;
             }
         }
@@ -108,6 +108,7 @@ public class KesTahabSaadaMiljonäriks {
 
     // Meetod, kus toimub reaalne mängu mängimine.
     static void väljastamine(Mängija mängija) throws Exception {
+        //Küsib, millist set'i soovitakse mängida
         Scanner küsimus= new Scanner(System.in);
         System.out.println("Millist küsimuste set'i soovite proovida (valige kas \"1\" või \"2\")? ");
         String set=küsimus.nextLine();
