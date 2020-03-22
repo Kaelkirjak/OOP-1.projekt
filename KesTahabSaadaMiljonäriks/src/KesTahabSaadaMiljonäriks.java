@@ -90,29 +90,9 @@ public class KesTahabSaadaMiljonäriks {
         return --interval; // Tagastab ühe võrra väiksema arvu.
     }
 
-    //meetod lisateksti  faili lugemise ja massiivi panemise jaoks
-    public static String[] lisaTekst(String set) throws Exception{
-        String failiteekond= "lisatekst"+set+".txt";
-        java.io.File fail= new java.io.File(failiteekond);
-        String[] lisa= new String[15];
-        int i=0;
-        try (java.util.Scanner sc = new java.util.Scanner(fail, "UTF-8")){
-            while (sc.hasNextLine()) {
-                String rida= sc.nextLine();
-                lisa[i]=rida;
-                i++;
-            }
-        }
-        return lisa;
-    }
-
     // meetod, kus toimub reaalne mängu mängimine.
     static void väljastamine(Mängija mängija) throws Exception {
-        Scanner küsimus= new Scanner(System.in);
-        System.out.println("Millist küsimuste set'i soovite proovida (valige kas \"1\" või \"2\")? ");
-        String set=küsimus.nextLine();
-        String fail= "küsimused"+set+".txt";
-        Andmed informatsioon = küsimusteAndmed(fail); // Luuakse andmed, kasutades meetodit küsimusteAndmed(failiteekond).
+        Andmed informatsioon = küsimusteAndmed("küsimused.txt"); // Luuakse andmed, kasutades meetodit küsimusteAndmed(failiteekond).
 
         // Massiivid/maatriks oma vastava sisuga.
         int[] summa = informatsioon.getSumma();
@@ -120,9 +100,6 @@ public class KesTahabSaadaMiljonäriks {
         String[][] vastused = informatsioon.getVastused();
         String[] vihjed = informatsioon.getVihjed();
         String[] õiged = informatsioon.getÕigedVastused();
-
-        //Eraldi failis asuva lisainfo massiivi lisamine
-        String lisa[] = lisaTekst(set);
 
         int vihjeteArv = 3; // Tähistab mitu korda saab mängija vihjet küsida.
         for (int i = 0; i < summa.length; i++) {
@@ -175,9 +152,10 @@ public class KesTahabSaadaMiljonäriks {
                 System.out.print("Kui soovite VIHJET, vajutage \"V\", kui ei soovi, vajutage midagi muud.");
                 System.out.println(" Teil on järgi " + vihjeteArv + " vihjet."); // Väljastab mitu vihjet saab veel mängija kasutada.
                 String vihje = kaks.nextLine();
-                if (vihje.equals("V")) // Väljastatakse vihje, kui mängija seda soovib.
+                if (vihje.equals("V")) {// Väljastatakse vihje, kui mängija seda soovib.
                     System.out.println("VIHJE: " + vihjed[i]);
-                vihjeteArv--;
+                    vihjeteArv--;
+                }
             }
 
             // Toimub vastuse sisestamine.
@@ -195,11 +173,11 @@ public class KesTahabSaadaMiljonäriks {
 
             //Õige vastuse kontroll
             if (vastus.equals(õiged[i])){
-                System.out.println("ÕIGE, "+ lisa[i].toString());
+                System.out.println("ÕIGE, õige vastus on: "+õiged[i]);
                 mängija.setVõidusumma(summa[i]);
             }
             else{ // Kui mängija sisestas vale vastuse lõpetatakse tema mäng.
-                System.out.println("Vale vastus, "+lisa[i]);
+                System.out.println("Vale vastus, õige oli: "+õiged[i]);
                 mängija.setVõidusumma(0); // Mängija võidetav summa väärtustatakse nulliga.
                 System.out.println();
                 System.out.println("Teie jaoks on kahjuks mäng läbi.");
@@ -213,7 +191,7 @@ public class KesTahabSaadaMiljonäriks {
     }
 
     public static void main(String[] args) throws Exception {
-        System.out.println("\nTere tulemast mängu \"kes tahab saada miljonäriks\".");
+        System.out.println("Tere tulemast mängu \"kes tahab saada miljonäriks\".");
         System.out.println("Iga küsimuse jaoks on 1 minut aega, et sellele vastata. Kui ei jõua selle aja sees vastata on Teie jaoks mäng läbi.");
         System.out.println("Samuti on mäng läbi, kui sisestate vale vastuse.");
         System.out.println("Vastuseks sisestage üks valiku vastustest MITTE NUMBER.");
