@@ -28,11 +28,11 @@ VIHJE: Sellest riigist pärines Eurovisiooni 2018. aasta võitja.
 Summa: 500 eurot
 Millisest Eesti ajaloosündmusest jutustab film "Detsembrikuumus"?
 a) Vabadussõjast
-b) 1940. aasta juunipöördest
-c) 1924. aasta mässukatsest
+b) 1940. aasta juunipöördest (sisestage ainult 1940)
+c) 1924. aasta mässukatsest (sisestage ainult 1924)
 d) Ei oska vastata ja lahkun mängust 300 euroga.
 VIHJE: Detsembrimäss oli Nõukogude Liidu ebaõnnestunud võimuhaaramise katse Eestis (1. detsembril).
-õige: 1924. aasta mässukatse
+õige: 1924
 
 Summa: 1000 eurot
 Millest valmistatakse tofut?
@@ -41,43 +41,43 @@ b) Riisist
 c) Kitsepiimast
 d) Ei oska vastata ja lahkun mängust 500 euroga.
 VIHJE: Valmistamine: leotatakse ja purustatakse ..., seejärel segu keedetakse ning kurnatakse. Tahke mass pressitakse kokku ning saadakse tofu.
-õige: sojapiimast
+õige: Sojapiimast
 
 Summa: 2000 eurot
 Mille leiutaja on sakslane Johann Gutenberg?
-a) Kompassi
-b) Trükikunsti
-c) Püssirohu
+a) Kompass
+b) Trükikunst
+c) Püssirohi
 d) Ei oska vastata ja lahkun mängust 1000 euroga.
 VIHJE: Tartus Aparaaditehases elavale kassile pandi nimeks "Johan Gutenberg".
-õige: Trükikunsti
+õige: Trükikunst
 
 Summa: 4000 eurot
 Mis aastal uppus "valge laev" ehk reisiparvlaev Estonia?
-a) 1994. aastal
-b) 1990. aastal
-c) 1998. aastal
+a) 1994
+b) 1990
+c) 1998
 d) Ei oska vastata ja lahkun mängust 2000 euroga.
 VIHJE: Estonia alusas merereise 2. veebruaril 1993.
-õige: 1994. aastal
+õige: 1994
 
 Summa: 8000 eurot
 Millises maailmajaos elavad pooled maailma ligikaudu miljardist katoliiklasest?
 a) Lõuna-Ameerika
-b) Aasias
-c) Põhja-Ameerikas
+b) Aasia
+c) Põhja-Ameerika
 d) Ei oska vastata ja lahkun mängust 4000 euroga.
 VIHJE: Aasia ei ole õige vastus
-õige: Lõuna-Ameerikas
+õige: Lõuna-Ameerika
 
 Summa: 16000 eurot
 Mitu liiki on ninasarvikuid?
-a) 1 liiki
-b) 5 liiki
-c) 7 liiki
+a) 1
+b) 5
+c) 7
 d) Ei oska vastata ja lahkun mängust 8000 euroga.
 VIHJE: 2 liiki elavad Aafrikas, ülejäänud mujal.
-õige: 5 liiki
+õige: 5
 
 Summa: 32000 eurot
 Kelle üks maalidest viis kunstimõiste impressionism tekkimiseni?
