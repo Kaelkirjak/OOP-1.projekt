@@ -60,21 +60,21 @@ public class KesTahabSaadaMiljonäriks {
         }
         return new Andmed(võidetavSumma, küsimused, vastused, vihjed, õigedVastused);
     }
-    //meetod, mis paneb vastusevariandid random järjekorda
+    // Meetod, kus pannakse vastusevariandid random järjekorda.
     public static String[] randomVastused(String [] variandid) {
 
-        //teen indeksite listi
+        // Tehakse indeksite list.
         int[] vastused= {0,1,2};
         Random random = new Random();
 
-        //panen indeksid listis random järjekorda
+        // Pannakse indeksid listis random järjekorda.
         for (int i = 0; i < vastused.length; i++) {
             int suvalineIndeks = random.nextInt(vastused.length);
             int suvaline= vastused[suvalineIndeks];
             vastused[suvalineIndeks] = vastused[i];
             vastused[i] = suvaline;}
 
-        //eelnevalt random indeksite listile panen vastavusse elemendid
+        // Eelnevalt random indeksite listile pannakse vastavusse elemendid.
         String[] randomVariandid=new String[4];
         for (int i=0;i<3;i++) {
             randomVariandid[i] = variandid[vastused[i]];
@@ -83,14 +83,14 @@ public class KesTahabSaadaMiljonäriks {
         return randomVariandid;
     }
 
-    // meetod taimeri jaoks.
+    // Meetod taimeri jaoks.
     private static int setInterval() {
         if (interval == 1)
-            timer.cancel(); // Lõpetab taimeri.
-        return --interval; // Tagastab ühe võrra väiksema arvu.
+            timer.cancel(); // Lõpetatakse taimer.
+        return --interval; // Tagastatakse ühe võrra väiksema arv.
     }
 
-    //meetod lisateksti  faili lugemise ja massiivi panemise jaoks
+    // Meetod lisateksti faili lugemise ja massiivi panemise jaoks.
     public static String[] lisaTekst(String set) throws Exception{
         String failiteekond= "lisatekst"+set+".txt";
         java.io.File fail= new java.io.File(failiteekond);
@@ -106,7 +106,7 @@ public class KesTahabSaadaMiljonäriks {
         return lisa;
     }
 
-    // meetod, kus toimub reaalne mängu mängimine.
+    // Meetod, kus toimub reaalne mängu mängimine.
     static void väljastamine(Mängija mängija) throws Exception {
         Scanner küsimus= new Scanner(System.in);
         System.out.println("Millist küsimuste set'i soovite proovida (valige kas \"1\" või \"2\")? ");
@@ -121,7 +121,7 @@ public class KesTahabSaadaMiljonäriks {
         String[] vihjed = informatsioon.getVihjed();
         String[] õiged = informatsioon.getÕigedVastused();
 
-        //Eraldi failis asuva lisainfo massiivi lisamine
+        // Eraldi failis asuva lisainfo massiivi lisamine.
         String lisa[] = lisaTekst(set);
 
         int vihjeteArv = 3; // Tähistab mitu korda saab mängija vihjet küsida.
@@ -131,7 +131,7 @@ public class KesTahabSaadaMiljonäriks {
 
             System.out.println("\nKui vastate järgmise küsimuse õigesti, siis võidate: "+summa[i]+" eurot!"); // Väljastatakse teave küsimuse kohta.
             Scanner üks =new Scanner(System.in);
-            System.out.println("Sisestage midagi, kui olete valmis küsimuseks ");
+            System.out.println("Sisestage midagi, kui olete valmis küsimuseks. ");
             String valmisolek =üks.nextLine();
 
             System.out.println(küsimused[i]); // Väljastatakse küsimus.
@@ -149,11 +149,10 @@ public class KesTahabSaadaMiljonäriks {
                 System.out.println((j + 1) + ") " + vastuseTükid[j]);
             }
 
-
+            timer = new Timer(); // Luuakse uus taimer.
             int viivitus = 1000; // Aeg millisekundites (1000ms = 1s).
             int periood = 1000; // Samuti aeg millisekundites.
-            timer = new Timer(); // Luuakse uus taimer.
-            String sekundid = "20"; // Aeg, mis on mängijal vastamiseks.
+            String sekundid = "60"; // Aeg, mis on mängijal vastamiseks.
             interval = Integer.parseInt(sekundid);
             timer.scheduleAtFixedRate(new TimerTask() {
                 public void run() {
@@ -175,9 +174,10 @@ public class KesTahabSaadaMiljonäriks {
                 System.out.print("Kui soovite VIHJET, vajutage \"V\", kui ei soovi, vajutage midagi muud.");
                 System.out.println(" Teil on järgi " + vihjeteArv + " vihjet."); // Väljastab mitu vihjet saab veel mängija kasutada.
                 String vihje = kaks.nextLine();
-                if (vihje.equals("V")) // Väljastatakse vihje, kui mängija seda soovib.
+                if (vihje.equals("V")) { // Väljastatakse vihje, kui mängija seda soovib.
                     System.out.println("VIHJE: " + vihjed[i]);
                 vihjeteArv--;
+                }
             }
 
             // Toimub vastuse sisestamine.
@@ -193,7 +193,7 @@ public class KesTahabSaadaMiljonäriks {
                 break;
             }
 
-            //Õige vastuse kontroll
+            // Õige vastuse kontroll.
             if (vastus.equals(õiged[i])){
                 System.out.println("ÕIGE, "+ lisa[i].toString());
                 mängija.setVõidusumma(summa[i]);
@@ -210,7 +210,7 @@ public class KesTahabSaadaMiljonäriks {
         // Väljastatakse mängija nimi ja tema võidusumma.
         System.out.print("Mängija " + mängija.getNimi() + " lahkub saatest " + mängija.getVõidusumma() + " euroga.");
         if (mängija.getVõidusumma()>500000)
-            System.out.println("Respect. Olete minu silmis miljonär :)"); //kui mängija võidab miljoni, saab erilise sõnumi.
+            System.out.println("\nRespect. Olete minu silmis miljonär :)"); // Kui mängija võidab miljoni, saab erilise sõnumi.
         System.out.println();
     }
 
